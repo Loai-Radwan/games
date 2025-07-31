@@ -56,13 +56,26 @@ A guessing game where each word is hinted at with an image. Great for visual lea
 ## 📁 Project Structure
 /project-folder
 │
-├── index.html # Landing Page (game selection)
-├── memory-game.html # Memory card flip game
-├── guess-word.html # Text-based guessing game
-├── guess-image-word.html # Image-based guessing game
-├── style.css # Shared styles
-├── /assets/ # Logos, icons, images
-└── README.md # This file
+├── index.html                 # Main landing page with links to all games
+│
+├── /assets                    # Contains individual game folders
+│   ├── memory-game/           # Memory card matching game
+│   ├── guess-word/            # Letter-based word guessing game
+│   └── image-guess/           # Image-based word guessing game
+│
+├── /img                       # Shared images and icons
+│   ├── guess.png
+│   └── memory-game.png
+│
+├── /css
+│   └── style.css              # Main shared stylesheet
+│
+├── /js
+│   └── main.js                # Shared JavaScript (e.g., landing page logic)
+│
+└── README.md                  # Project documentation
+ 
+
 
 
 ---
@@ -76,9 +89,6 @@ A guessing game where each word is hinted at with an image. Great for visual lea
 ---
 
 ## ✨ Credits
-
-- Icons from [Flaticon](https://flaticon.com)  
-- Images from [Unsplash](https://unsplash.com)  
 - Developed by **Loai Alshujaa**
 
 ---
