@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Game Hub</title>
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.landing-container {
+  background: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+}
+
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.game-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 25px;
+  border-radius: 12px;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+}
+
+.game-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.game-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00cec9;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0984e3;
+}
+
+  </style>
+</head>
+<body>
+  <div class="landing-container">
+    <div class="intro">
+      <h1>🎮 Welcome, Loai</h1>
+      <p>Select a game to play</p>
+    </div>
+
+    <div class="game-grid">
+      <!-- Game 1: Memory Game -->
+      <div class="game-card">
+        <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Memory Game" />
+        <h2>Memory Game</h2>
+        <button onclick="startGame('memory')">Play</button>
+      </div>
+
+      <!-- Game 2: Guess Number -->
+      <div class="game-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="Guess Game" />
+        <h2>Guess the Number</h2>
+        <button onclick="startGame('guess')">Play</button>
+      </div>
+
+      <!-- Game 3: Tic Tac Toe -->
+      <div class="game-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/861/861512.png" alt="Tic Tac Toe" />
+        <h2>Tic Tac Toe</h2>
+        <button onclick="startGame('tictactoe')">Play</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function startGame(game) {
+      if (game === 'memory') window.location.href = 'memory-game.html';
+      else if (game === 'guess') window.location.href = 'guess-game.html';
+      else if (game === 'tictactoe') window.location.href = 'tic-tac-toe.html';
+    }
+  </script>
+</body>
+</html>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="landing-container">
+    <div class="content">
+      <h2>🧠 Memory Match</h2>
+      <p>Flip the cards. Match the pairs. Test your memory!</p>
+      <button onclick="startGame()">Start Game</button>
+    </div>
+  </div>
+
+  <script>
+    function startGame() {
+      window.location.href = "game.html"; // Or change this to your game page
+    }
+  </script>
+</body>
+</html>

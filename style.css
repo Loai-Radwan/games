@@ -1,0 +1,252 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, #1d1f27, #282c34);
+    color: white;
+    font-family: sans-serif;
+}
+
+.landing {
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    position: relative;
+}
+
+.landing::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.landing .title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;    
+    text-align: center;
+    animation: fade-in 1.5s ease-in-out forwards;
+}
+
+.landing h1 {
+    font-size: 45px;
+}
+@media (max-width:767px) {
+    .landing h1{
+        font-size:30px ;
+        
+    }
+   
+}
+.landing h1 span {
+    /* position: absolute; */
+    animation: flash 2.5s infinite ease-out;
+}
+@media (max-width:767px) {
+    .landing h1 span{
+        animation: none;
+    }
+   
+}
+
+.intro{
+    padding: 60px 0;
+    text-align: center;
+    background-color: #111;
+    background-image: radial-gradient(circle, #222 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.intro h2{
+    margin-bottom: 20px;
+}
+.intro p{
+    line-height: 1.7;
+    color:#ccc;
+    margin-bottom: 30px;
+}
+.intro a{
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(99 102 241);
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.intro a:hover{
+    background-color:rgb(67 56 202);
+}
+
+
+.games {
+
+    margin: 70px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (min-with:768px) {
+    .games {
+        width: 750px;
+    }
+}
+
+@media (min-with:992px) {
+    .games {
+        width: 970px;
+    }
+}
+
+@media (min-with:1200px) {
+    .games {
+        width: 1150px;
+    }
+}
+
+.games .heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.games .heading h2{
+    font-size: 30px;
+}
+@media (max-width:767px) {
+    .landing h2{
+        font-size:25px ;
+        
+    }
+   
+}
+.games .games-holder{
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;   
+}
+
+.games .game {
+    background-color: #111;
+    background-image: radial-gradient(circle, #222 1px, transparent 1px);
+    background-size: 40px 40px;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition:  0.3s;
+    opacity: 0;
+    animation: 2s ease-in-out forwards;
+}
+
+.games .game:hover{
+    /* box-shadow:-6px 6px 10px #1685b273; */
+    
+}
+.games .game .image{
+    flex: 1 200px;
+}
+.games .game .text{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.games .game img{
+    border-radius: 6px;
+    width: 100%;
+}
+
+.games .game h2{
+    margin: 20px 0 15px;
+}
+.games .game p {
+    margin: 10px 0 15px;
+    color: #eee;
+    line-height: 1.7;
+}
+.games .game a{
+    display: inline-block;
+    background-color: #00cec9;
+    padding: 10px 15px;
+    margin:  15px 0 10px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    
+}
+.games .game a:hover{
+    background-color: #0984e3;
+}
+
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #191919;
+}
+
+
+
+
+
+
+/* Animation */
+
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        top: 100%;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+@keyframes flash {
+
+    0%,
+    100% {
+        opacity: 0.2;
+        font-size: 0px;
+        /* transform: scale(0.5); */
+    }
+
+    30%,
+    50% {
+        opacity: 1;
+        font-size: 35px;
+    }
+
+    /* 100%{
+        transform: scale(1.2);
+    } */
+}
