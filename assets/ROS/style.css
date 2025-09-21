@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  height: 100vh;
+}
+img{
+    max-width: 100%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@media (max-width:767px) {
+    .container{
+        width:98%;
+    }
+
+}
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container{
+        width: 1140px;
+    }
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+header img{
+    width: 120px;
+}
+.game-board .choice{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+.game-board .choice.hide{
+    display: none;
+}
+@media (max-width:767px) {
+    .game-board .choice{
+        flex-direction: column;
+        
+    }
+    .game-board .choice .box{
+        width: 65%;
+    }
+}
+.game-board .choice .box{
+    border-radius: 25%;
+    flex: 1 0 ;
+    background: white;
+    border: 3px solid #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.game-board .choice .box:hover {
+    background-color: #f9f9f9;
+  transform: scale(1.05);
+}
+
+.game-board .result{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;}
+.game-board .result.show{
+    display: flex;
+}
+.game-board .result .box{
+    flex: 1 0;
+    border-radius: 25%;
+    background: white;
+    border: 3px solid #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.game-board .result .box h2{
+    text-align: center;
+    margin-top: 10px;
+}
+.game-board .result .box img{
+    width: 300px;
+}
