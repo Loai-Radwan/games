@@ -1,6 +1,6 @@
-# 🎮 Loai’s Game Zone
+# 🎮 Mini Game Collection
 
-Welcome to **Loai’s Game Zone** — a collection of fun, responsive mini web games built with HTML, CSS, and JavaScript. Challenge your memory, guessing skills, and visual thinking with three interactive games:
+Welcome to **Mini Game Collection** — a collection of fun, responsive mini web games built with HTML, CSS, and JavaScript. Challenge your memory, guessing skills, and visual thinking with three interactive games:
 
 ---
 
